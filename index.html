@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axiom Spammer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-message">Loading, please wait...</div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <h1>Axiom Spammer</h1>
+        </div>
+        <div class="tagline">
+            <p>Discord Webhook Spammer deleter and other stuff</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="ascii-art">
+            <pre>
+ ________     ___    ___ ___  ________  _____ ______           
+|\   __  \   |\  \  /  /|\  \|\   __  \|\   _ \  _   \        
+\ \  \|\  \  \ \  \/  / | \  \ \  \|\  \ \  \\\__\ \  \       
+ \ \   __  \  \ \    / / \ \  \ \  \\\  \ \  \\|__| \  \       
+  \ \  \ \  \  /     \/   \ \  \ \  \\\  \ \  \    \ \  \       
+   \ \__\ \__\/  /\   \    \ \__\ \_______\ \__\    \ \__\       
+    \|__|\|__/__/ /\ __\    \|__|\|_______|\|__|     \|__|       
+             |__|/ \|__|                                                                                         
+            </pre>
+        </div>
+
+        <div class="form-container">
+            <label for="webhookUrl">Enter Discord Webhook URL:</label>
+            <input type="text" id="webhookUrl" placeholder="https://discord.com/api/webhooks/WEBHOOK_ID/WEBHOOK_TOKEN">
+            <br>
+            <label for="pingRole">Role/User ID to Ping:</label>
+            <input type="text" id="pingRole" placeholder="Enter Role ID or User ID">
+            <br>
+            <label for="customMessage">Custom Message:</label>
+            <input type="text" id="customMessage" placeholder="Enter your custom message here">
+            <br>
+            <label for="times">How many times to send?</label>
+            <input type="number" id="times" min="1" max="100" value="1">
+            <br>
+            <button id="nukeButton" class="nuke-button">Nuke!</button>
+            <button id="deleteWebhookButton" class="delete-button">Delete Webhook</button>
+            <div class="message" id="message"></div>
+        </div>
+    </div>
+
+    <div class="trademark">™</div>
+    <div class="rights-message">All rights to @P4OX on Discord</div>
+
+    <div class="matrix"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
