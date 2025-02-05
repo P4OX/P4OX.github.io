@@ -1,4 +1,3 @@
-/* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #121212;
@@ -43,10 +42,8 @@ header .tagline p {
     z-index: 1;
     position: relative;
     flex-grow: 1;
-    box-sizing: border-box;
 }
 
-/* ASCII Art */
 .ascii-art pre {
     font-size: 12px;
     font-family: 'Courier New', monospace;
@@ -56,7 +53,6 @@ header .tagline p {
     word-wrap: break-word;
 }
 
-/* Form Elements */
 input, button {
     width: 100%;
     padding: 15px;
@@ -87,7 +83,39 @@ button:hover {
     color: #FF5733;
 }
 
-/* Matrix Animation */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #121212;
+    color: #00FF00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+    font-size: 20px;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+}
+
+.loading-message {
+    font-size: 24px;
+}
+
+.delete-webhook-button {
+    background-color: #FF4D4D;
+    color: white;
+    border: 2px solid #FF4D4D;
+}
+
+.delete-webhook-button:hover {
+    background-color: #FF0000;
+    border-color: #FF0000;
+}
+
 .matrix {
     position: absolute;
     top: 0;
@@ -111,74 +139,5 @@ button:hover {
     }
     100% {
         top: 100%;
-    }
-}
-
-/* Loading Screen */
-#loadingScreen {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #00FF00;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    z-index: 10;
-}
-
-.loading-message {
-    text-align: center;
-}
-
-/* Footer */
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: #121212;
-    color: #00FF00;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    font-size: 14px;
-    z-index: 10;
-    flex-shrink: 0;
-}
-
-footer .trademark {
-    font-size: 18px;
-}
-
-footer .rights-message {
-    font-size: 16px;
-    margin-left: 10px;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .container {
-        padding: 15px;
-    }
-
-    header .logo h1 {
-        font-size: 28px;
-    }
-
-    header .tagline p {
-        font-size: 16px;
-    }
-
-    .message {
-        font-size: 16px;
-    }
-
-    input, button {
-        padding: 12px;
-        font-size: 14px;
     }
 }
