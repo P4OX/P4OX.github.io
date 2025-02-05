@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #121212;
@@ -42,8 +43,10 @@ header .tagline p {
     z-index: 1;
     position: relative;
     flex-grow: 1;
+    box-sizing: border-box;
 }
 
+/* ASCII Art */
 .ascii-art pre {
     font-size: 12px;
     font-family: 'Courier New', monospace;
@@ -53,6 +56,7 @@ header .tagline p {
     word-wrap: break-word;
 }
 
+/* Form Elements */
 input, button {
     width: 100%;
     padding: 15px;
@@ -83,6 +87,7 @@ button:hover {
     color: #FF5733;
 }
 
+/* Matrix Animation */
 .matrix {
     position: absolute;
     top: 0;
@@ -109,6 +114,27 @@ button:hover {
     }
 }
 
+/* Loading Screen */
+#loadingScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #00FF00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    z-index: 10;
+}
+
+.loading-message {
+    text-align: center;
+}
+
+/* Footer */
 footer {
     display: flex;
     justify-content: center;
@@ -133,21 +159,26 @@ footer .rights-message {
     margin-left: 10px;
 }
 
-.loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #00FF00;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
 
-.loading-message {
-    font-size: 24px;
-    font-weight: bold;
+    header .logo h1 {
+        font-size: 28px;
+    }
+
+    header .tagline p {
+        font-size: 16px;
+    }
+
+    .message {
+        font-size: 16px;
+    }
+
+    input, button {
+        padding: 12px;
+        font-size: 14px;
+    }
 }
